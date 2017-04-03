@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<title>Lyrical Postcard Generator</title>
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 		<link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Dancing+Script:700|Permanent+Marker" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
@@ -19,110 +20,113 @@
 				<div class="wrapper">
 
 					<form action="">
+						<div class="names">
+							<fieldset class="nameEntryTo">
+								<label for="recipient"><i class="fa fa-user" aria-hidden="true"></i> Name of recipient:</label><br>
+								<input type="text" placeholder="Who is this for?" name="recipient" id="recipient">
+							</fieldset>
 
-						<fieldset class="nameEntryTo">
-							<label for="recipient"><i class="fa fa-user" aria-hidden="true"></i> Name of recipient:</label><br>
-							<input type="text" placeholder="Who is this for?" name="recipient" id="recipient">
-						</fieldset>
 
+							<fieldset class="nameEntryFrom">
+								<label for="sender"><i class="fa fa-user" aria-hidden="true"></i> Name of sender:</label><br>
+								<input type="text" placeholder="Who are you?" name="sender" id="sender">
+							</fieldset>
+						</div>
+						<div class="questions">
+							<fieldset class="favFood">
+								<p><i class="fa fa-cutlery" aria-hidden="true"></i> What is your favourite food?</p>
+								<div class="questionSet">
+									<div>
+										<input type="radio" name="food" id="burger" value="burger" checked="checked">
+										<label for="burger">Burgers</label>
+									</div>
 
-						<fieldset class="nameEntryFrom">
-							<label for="sender"><i class="fa fa-user" aria-hidden="true"></i> Name of sender:</label><br>
-							<input type="text" placeholder="Who are you?" name="sender" id="sender">
-						</fieldset>
+									
+									<div>
+										<input type="radio" name="food" id="beer" value="beer">
+										<label for="sushi">Beer</label>
+									</div>
 
-						<fieldset class="favFood">
-							<p><i class="fa fa-cutlery" aria-hidden="true"></i> What is your favourite food?</p>
-							<div class="questionSet">
-								<div>
-									<input type="radio" name="food" id="burger" value="burger" checked="checked">
-									<label for="burger">Burgers</label>
+									
+									<div>
+										<input type="radio" name="food" id="taco" value="taco">
+										<label for="burrito">Taco</label>
+									</div>
 								</div>
+							</fieldset>
 
-								
-								<div>
-									<input type="radio" name="food" id="beer" value="beer">
-									<label for="sushi">Beer</label>
-								</div>
 
-								
-								<div>
-									<input type="radio" name="food" id="taco" value="taco">
-									<label for="burrito">Taco</label>
+							<fieldset class="favTime">
+								<p><i class="fa fa-clock-o" aria-hidden="true"></i> What is your favourite time of the day?</p>
+								<div class="questionSet">
+									<div>
+										<input type="radio" name="time" id="dawn" value="dawn" checked="checked">
+										<label for="dawn">Dawn</label>
+									</div>
+
+
+									<div>
+										<input type="radio" name="time" id="noon" value="noon">
+										<label for="noon">Noon</label>
+									</div>
+
+
+									<div>
+										<input type="radio" name="time" id="dusk" value="dusk">
+										<label for="dusk">Dusk</label>
+									</div>
+								</div>	
+							</fieldset>
+
+
+							<fieldset class="favBackground">
+								<p><i class="fa fa-globe" aria-hidden="true"></i> What is your preferred scenery?</p>
+								<div class="questionSet">
+									<div>
+										<input type="radio" name="scenery" id="mountain" value="mountain" checked="checked">
+										<label for="mountains">Mountains</label>
+									</div>
+
+
+									<div>
+										<input type="radio" name="scenery" id="forest" value="forest">
+										<label for="forest">Forest</label>
+									</div>
+
+
+									<div>
+										<input type="radio" name="scenery" id="ocean" value="ocean">
+										<label for="ocean">Ocean</label>
+									</div>
 								</div>
+							</fieldset>
+						</div>
+						<div class="hobbyButton">
+							<fieldset class="favHobby">
+								<p><i class="fa fa-futbol-o" aria-hidden="true"></i> How do you like to spend your day?</p>
+								<div class="questionSet">
+									<div>
+										<input type="radio" name="hobby" id="metal" value="metal" checked="checked">
+										<label for="mountains">Burning churches.</label>
+									</div>
+
+
+									<div>
+										<input type="radio" name="hobby" id="rap" value="rap">
+										<label for="forest">Poppin' bottles in the club.</label>
+									</div>
+
+
+									<div>
+										<input type="radio" name="hobby" id="country" value="country">
+										<label for="ocean">Drinking beer on a horse, talking about pickup trucks.</label>
+									</div>
+								</div>
+							</fieldset>
+
+							<div class="submit-container">
+								<input type="submit" value="Get me my picture!" class="submit">
 							</div>
-						</fieldset>
-
-
-						<fieldset class="favTime">
-							<p><i class="fa fa-clock-o" aria-hidden="true"></i> What is your favourite time of the day?</p>
-							<div class="questionSet">
-								<div>
-									<input type="radio" name="time" id="dawn" value="dawn" checked="checked">
-									<label for="dawn">Dawn</label>
-								</div>
-
-
-								<div>
-									<input type="radio" name="time" id="noon" value="noon">
-									<label for="noon">Noon</label>
-								</div>
-
-
-								<div>
-									<input type="radio" name="time" id="dusk" value="dusk">
-									<label for="dusk">Dusk</label>
-								</div>
-							</div>	
-						</fieldset>
-
-
-						<fieldset class="favBackground">
-							<p><i class="fa fa-globe" aria-hidden="true"></i> What is your preferred scenery?</p>
-							<div class="questionSet">
-								<div>
-									<input type="radio" name="scenery" id="mountain" value="mountain" checked="checked">
-									<label for="mountains">Mountains</label>
-								</div>
-
-
-								<div>
-									<input type="radio" name="scenery" id="forest" value="forest">
-									<label for="forest">Forest</label>
-								</div>
-
-
-								<div>
-									<input type="radio" name="scenery" id="ocean" value="ocean">
-									<label for="ocean">Ocean</label>
-								</div>
-							</div>
-						</fieldset>
-
-						<fieldset class="favHobby">
-							<p><i class="fa fa-futbol-o" aria-hidden="true"></i> How do you like to spend your day?</p>
-							<div class="questionSet">
-								<div>
-									<input type="radio" name="hobby" id="metal" value="metal" checked="checked">
-									<label for="mountains">Burning churches.</label>
-								</div>
-
-
-								<div>
-									<input type="radio" name="hobby" id="rap" value="rap">
-									<label for="forest">Poppin' bottles in the club.</label>
-								</div>
-
-
-								<div>
-									<input type="radio" name="hobby" id="country" value="country">
-									<label for="ocean">Drinking beer on a horse, talking about pickup trucks.</label>
-								</div>
-							</div>
-						</fieldset>
-
-						<div class="submit-container">
-							<input type="submit" value="Get me my picture!" class="submit">
 						</div>
 					</form>
 
@@ -170,12 +174,7 @@
 
 
 		<footer>
-			<p>Created By: Adam & Ben</p>
-			<p>Background pattern taken from <a href="http://www.colourlovers.com/">COLOURlovers</a></p>
-			<div class="patternCredits">
-				<p>Shoutouts to <a href="http://www.colourlovers.com/lover/falloutgal">falloutgal</a> for the <a href="http://www.colourlovers.com/pattern/2673730/The_Cuteness">the pattern</a></p>
-				<p>and <a href="http://www.colourlovers.com/lover/cookie-rookie">cookie-rookie</a> for the <a href="http://www.colourlovers.com/pattern/template/210997/Kitty_%E2%99%A5%60s_music">pattern template</a></p>
-			</div>
+			<p>Developed By: Adam McMillan & Ben Tran</p>
 		</footer>
 
 

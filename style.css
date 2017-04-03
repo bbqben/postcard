@@ -14,7 +14,7 @@ html {
 }
 
 body {
-	background: url("images/kitty-cat.png");
+	background: #022648;
 }
 a, a:visited {
 	color: white;
@@ -25,7 +25,7 @@ a:focus, button:focus, input:focus {
 
 
 .wrapper {
-	max-width: 1000px;
+	max-width: 900px;
 	margin: 0 auto;
 }
 
@@ -36,68 +36,99 @@ a:focus, button:focus, input:focus {
 h1 {
 	text-align: center;
 	color: mintcream;
-	text-shadow: 0px 0px 9px black;
-	font-size: 4.5rem;
+	/*text-shadow: 0px 0px 9px black;*/
+	font-size: 6rem;
 }
 
 /**THIS IS WHERE THE QUIZ STYLING BEGINS**/
 
 .nameEntryTo label, .nameEntryFrom label {
-	padding-right: 15px;
+	margin-bottom: 12px;
+    display: inline-block;
 }
 form {
+	background: #c2e2f9;
+	margin-bottom: 120px;
+	padding: 60px 40px;
+	border-radius: 5px;
 }
 fieldset {
-	background: rgba(95, 158, 160,0.9);
 	padding: 20px 0;
-	text-align: center;
 	font-size: 1.8rem;
-	border: 1px solid black;
-	border-left: 4px solid black;
-	border-right: 4px solid black;
+	border: none;
 }
+.names {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0 35px;
+
+}
+
 .nameEntryTo {
-	border-top: 5px solid black;
+	/*padding-top: 80px;*/
 }
 .favHobby {
-	border-bottom: 5px solid black;
+	padding-bottom: 0px;
+	align-self: flex-end;
 }
 fieldset p {
 	font-size: 2rem;
 	margin-top: 0;
+
 }
 fieldset > label {
 	font-size: 2rem;
 }
 fieldset input {
-	font-size: 2.8rem;
-	text-align: center;
+	border: none;
+	font-size: 1.8rem;
+	padding: 5px;
+	border-bottom: 1px solid black;
+	background: #c2e2f9;
 }
 .questionSet {
-	display: flex;
-	justify-content: space-around;
+	text-align: left;
+}
+.questionSet div {
+	padding: 5px 0;
 }
 .questionSet div label {
 	font-size: 1.8rem;
 }
+.questions {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 40px 0;
+	width: 100%;
+}
+.questions fieldset {
+	margin: 0 35px;
+    width: 33%;
+}
+.hobbyButton {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
 .submit-container {
 	text-align: center;
-	padding-bottom: 100px;
-	margin-top: 20px;
+	align-self: flex-end;
 }
 .submit {
-	background-color: tomato;
+	background-color: #f5907c;
+	color: white;
 	border: none;
-	font-size: 2.2rem;
-	padding: 35px;
-	color: papayawhip;
-	border-radius: 50px;
+	font-size: 1.6rem;
+	padding: 20px;
+	border-radius: 5px;
 }
 .submit:hover {
-	background-color: #ad1a00;
+	background-color: #fbd2b4;
+	color: black;
 }
 .submit:active {
-	background-color: #ad1a00;
 	box-shadow: 0 5px #666;
 	transform: translateY(4px);
 }
@@ -110,31 +141,31 @@ fieldset input {
 
 /**THIS IS WHERE POSTCARD STYLING BEGINS**/
 .result {
-	margin-bottom: 300px;
+	margin-bottom: 40px;
 }
 .tryAgain {
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 1.7rem;
-	color: papayawhip;
-	background-color: tomato;
-	padding: 20px 10px;
+	background-color: #f5907c;
+	color: white;
+	border: none;
+	font-size: 1.6rem;
+	padding: 20px;
+	color: black;
+	border-radius: 5px;
 	display: block;
 	margin: 20px 0;
 	text-align: center;
-	border-radius: 50px;
+	text-transform: uppercase;
+	text-decoration: none;
 }
 .tryAgain:hover {
-	background-color: #ad1a00;
+	background-color: #fbd2b4;
+	color: black;
 }
 .tryAgain:active {
-	background-color: #ad1a00;
 	box-shadow: 0 5px #666;
 	transform: translateY(4px);
 }
-.result__content {
-	box-shadow: 6px 8px 20px 10px rgba(0, 0, 0, 0.46);
-}
+
 .result__card {
 	display: flex;
 	justify-content: space-between;
@@ -157,7 +188,7 @@ fieldset input {
 	font-family: 'Dancing Script', cursive;
 	font-size: 3.6rem;
 	letter-spacing: 3.5px;
-	width: 50%;
+	width: 75%;
 	margin:0 auto;
 	padding: 20px 0;
 
@@ -167,7 +198,7 @@ fieldset input {
 	width: 30%;
 	border-left: 5px solid black;
 	padding-left: 30px;
-	background-color: papayawhip;
+	background-color: white;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	position: relative;
@@ -188,7 +219,7 @@ fieldset input {
     justify-content: space-around;
     min-height: 70%;
     padding-top: 100px;
-    color: tomato;
+    color: rgba(19, 2, 2, 0.83);
 }
 .message p:nth-of-type(2) {
 	line-height: 2.1;
@@ -251,17 +282,10 @@ fieldset input {
 /**THIS IS WHERE THE FOOTER BEGINS**/
 
 footer {
-	background-color: black;
-	color: white;
-	margin: 20px 0 0 0;
-	padding: 20px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	align-items: center;
+	background-color: rgba(19, 2, 2, 0.83);
+    color: white;
+    padding: 20px;
+    width: 100%;
 }
 footer p, .patternCredits {
 	margin: 0;
